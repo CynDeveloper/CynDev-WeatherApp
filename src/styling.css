@@ -1,0 +1,94 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  color: rgb(144, 83, 83);
+  font-size: 40px;
+
+  font-weight: 400px;
+  line-height: 28px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 60px;
+  padding-right: 10px;
+}
+.class-weather-app {
+  border: 1px solid none;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 720px;
+  border-radius: 10px;
+  background-color: rgb(218, 249, 239);
+  box-shadow: 2px 3px rgb(177, 223, 232), 0.4em 0 0.7em olive;
+}
+.temperature {
+  font-size: 67px;
+  line-height: 1;
+}
+
+.sun-pic {
+  float: left;
+  height: 70px;
+  width: 70px;
+  vertical-align: middle;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -35px;
+  right: 20px;
+}
+.today-temp {
+  color: rgb(107, 98, 100);
+  font-size: 80px;
+  font-weight: 100px;
+  line-height: 10px;
+
+  margin: 10 0 auto;
+  text-align: center;
+}
+.weather-search-form {
+  padding: 4px;
+}
+h3 {
+  font-size: 15px;
+  color: rgb(107, 98, 100);
+}
+form {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+.box {
+  border: 1px solid pink;
+  padding: 13px;
+  font-size: small;
+
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  position: relative;
+  right: 15px;
+}
+
+.week-days {
+  border-radius: 10px;
+}
+.col-6 {
+  color: rgb(144, 83, 83);
+}
+a {
+  text-decoration: none;
+}
+.row-align-items-end {
+  border: 2px solid black;
+}
