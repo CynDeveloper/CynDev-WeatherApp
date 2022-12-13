@@ -20,6 +20,7 @@ function formattedDate(currentdate) {
     "Friday",
     "Saturday",
   ];
+
   // so to console.log this it would be , console.log (days[dayIndex]); its looking inside the days Array to match the # with the day
   //so for ex  if cuurentTime/getDay =2 , that would === Wednesday b/c Wed=== 2.
   let day = days[dayIndex];
@@ -52,6 +53,7 @@ fahrenheit.addEventListener("click", switchtofahrenheit);
 //weather functions
 
 function displayWeatherCondition(response) {
+  console.log(response.data);
   document.querySelector("#city-element").innerHTML = response.data.name;
   document.querySelector("#todays-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -67,6 +69,16 @@ function displayWeatherCondition(response) {
   document.querySelector("#coverage").innerHTML = `${
     response.data.weather[0].main
   } ${"today"}`;
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
+  document.querySelector("#weatherDescription").innerHTML =
+    response.data.weather[0].description;
 }
 
 function searchCity(city) {
