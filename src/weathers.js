@@ -40,13 +40,36 @@ let currentElement = document.querySelector("#thedate");
 let date = new Date();
 currentElement.innerHTML = formattedDate(date);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row row-cols-7 text-center">`;
+  let days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col">
+          <div class="box shadow-sm">${day}
+            <br />
+            ☁️
+            <br />
+            19
+        </div>
+        
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //function 2
 
 //function 3
 
 function switchtofahrenheit(event) {
   event.preventDefault();
-let temperatureElement = document.querySelector("#todays-temp");
+  let temperatureElement = document.querySelector("#todays-temp");
   let fahrenheit = (celciusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheit);
 }
@@ -54,7 +77,7 @@ let temperatureElement = document.querySelector("#todays-temp");
 function switchtocelcius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#todays-temp");
-temperatureElement.innerHTML = Math.round(celciusTemperature);
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 let celciusTemperature = null;
 
@@ -130,4 +153,6 @@ let currentSearchForm = document.querySelector("#current-location");
 currentSearchForm.addEventListener("click", getCurrentLocation);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+displayForecast();
 searchCity("Los Angeles");
