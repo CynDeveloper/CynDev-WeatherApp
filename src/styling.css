@@ -69,7 +69,7 @@ ul {
 }
 .box {
   border: 1px solid pink;
-  padding: 13px;
+  padding: 0px;
   font-size: small;
 
   border-radius: 5px;
